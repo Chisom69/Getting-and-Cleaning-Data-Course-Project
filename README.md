@@ -12,6 +12,7 @@ The R script called run_analysis.R  does the following:
 
 Steps to work on this course project
 
-    Put run_analysis.R in the working directory.
-    Run source("run_analysis.R"), then it will generate a new file tiny_data.txt in your working directory.
+    Download the data source and put into your working directory. You'll have a UCI HAR Dataset folder.
+    Put run_analysis.R in the same working directory.
+    Run source("run_analysis.R"), then it will generate a new file tiny_data.txt in the same working directory.
 

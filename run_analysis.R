@@ -1,11 +1,3 @@
-#create tempoarary directory
-tempd <- tempdir()
-#create tempoarary file
-tempf <- tempfile(tmpdir = tempd, fileext = ".zip")
-#down load file from the give url and unzip file to working directory
-download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", tempf)
-unzip(tempf)
-
 # Read activity labels
 activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt")
 # Read data column names
@@ -19,9 +11,6 @@ subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")
 x_train <- read.table("./UCI HAR Dataset/train/X_train.txt")
 y_train <- read.table("./UCI HAR Dataset/train/y_train.txt")
 subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt")
-
-#remove files after loading data and processing data
-unlink("UCI HAR Dataset", recursive = T)
 
 # Assign column name
 colnames(activity_labels) <- c('Activity_ID','Activity_Label')
